@@ -19,7 +19,9 @@ public class ProdutoBean implements Serializable {
 	private List<Produto> produtos = new ArrayList<Produto>();
 
 	public void adicionaProduto() {
-		if (produto.getNome() != null && !produto.getNome().isEmpty()) {
+		String nome = produto.getNome();
+		
+		if (nome != null && !nome.isEmpty()) {
 			produtos.add(produto);
 		}
 
