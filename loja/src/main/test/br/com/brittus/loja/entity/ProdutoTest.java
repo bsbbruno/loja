@@ -11,4 +11,11 @@ public class ProdutoTest {
 		assertEquals("bala", produto.getNome());
 	}
 	
+	@Test
+	public void deveSetarNovoObjetoConstrutorPadrao() {
+		Produto produto = new Produto();
+		produto.setNome("bala");
+		assertEquals("bala", produto.getNome());
+	}
+	
 }
