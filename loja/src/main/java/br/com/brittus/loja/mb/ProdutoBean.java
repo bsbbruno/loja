@@ -7,6 +7,8 @@ import java.util.List;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
+import com.google.common.base.Strings;
+
 import br.com.brittus.loja.entity.Produto;
 
 @Named
@@ -21,7 +23,7 @@ public class ProdutoBean implements Serializable {
 	public void adicionaProduto() {
 		String nome = produto.getNome();
 		
-		if (nome != null && !nome.isEmpty()) {
+		if (!Strings.isNullOrEmpty(nome)) {
 			produtos.add(produto);
 		}
 
